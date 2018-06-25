@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>JOGO DA FORCA | JOGO</title>
+    <meta name="description" content="JOGO A FORCA">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- STANDARD W3.CSS -->
+    <link rel="stylesheet" type="text/css" href="http://www.w3schools.com/lib/w3.css">
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <!-- JQUERY -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+</head>
+
+<body>
+
+   
+
+    <div id="preferencias" class="w3-container w3-light-grey w3-center">
+        <h1>Preferências</h1>
+        <div class="w3-container caixa w3-card-4 w3-bordered w3-white w3-margin-bottom">
+
+            <form id="modo" class="w3-container">
+                <span class="negrito">Modo de jogo</span>
+                <p>
+                    <input type="radio" name="option" value="normal" checked> Normal
+                    <input type="radio" name="option" value="random"> Random
+                </p>
+            </form>
+
+            <form id="tema" class="w3-container">
+                <span class="negrito">Tema</span>
+                <p>
+                    <select class="w3-select w3-border espaco" name="option">
+                        <option value="objetos">Objetos</option>
+                        <option value="cores">Cores</option>
+                        <option value="animais">Animais</option>
+                    </select>
+                </p>
+            </form>
+
+            <form id="dificuldade" class="w3-container">
+                <span class="negrito">Nível</span>
+                <p>
+                    <select class="w3-select w3-border espaco" name="option">
+                        <option value="facil">Fácil</option>
+                        <option value="normal">Normal</option>
+                        <option value="dificil">Difícil</option>
+                    </select>
+                </p>
+            </form>
+
+            <div class="w3-container w3-margin-bottom">
+                <button id="botaoInicia">Começar a jogar!</button>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div id="elemJogo" class="w3-container w3-center w3-margin-top w3-margin-bottom">
+        <div id="relogio"></div>
+        <div id="direita" class="w3-margin-top">
+            <div id="temaPalavra"></div>
+            <div id="tracinhos"></div>
+            <div id="mensagem"></div>
+            <div id="letrasErradas" class="w3-margin-bottom">
+                <h4>Letras erradas</h4>
+            </div>
+            <div id="modoNormal" class="w3-container">
+                <form name="resposta">
+                    <label>Escreva aqui a letra: </label>
+                    <input type="text" id="letra" value="" />
+                </form>
+                <button id="botaoResposta" class="w3-margin-top">Verificar</button>
+            </div>
+
+            <div id="modoRandom" class="w3-container">
+                <form name="resposta">
+                    <label>Aceitas esta letra? </label>
+                    <span id="letraRand"></span>
+                </form>
+                <button id="sim">SIM</button>
+                <button id="nao">NÃO</button>
+            </div>
+        </div>
+
+        <div id="novoJogo" class="w3-container">
+            <a class="w3-btn w3-blue w3-large w3-margin-top" href="jogo.html">NOVO JOGO</a>
+        </div>
+
+    </div>
+
+    <!-- SCRIPT DO JOGO -->
+    <script src="jogo.js"></script>
+</body>
+
+</html>
